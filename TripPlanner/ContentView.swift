@@ -9,16 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-      ZStack {
-        Color.black
+      VStack(spacing: .none) {
         MapViewController.MapViewRepresentable()
+          .frame(width: .screenWidth, height: .screenHeight * 0.75)
+        Color.orange
+          .frame(width: .screenWidth, height: .screenHeight * 0.25)
       }
       .edgesIgnoringSafeArea(.all)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
